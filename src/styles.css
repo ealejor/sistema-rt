@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "ComfortaaRegular";
+  src: url("assets/fonts/comfortaa/Comfortaa-Regular.ttf");
+}
+@font-face {
+  font-family: "ComfortaaBold";
+  src: url("assets/fonts/comfortaa/Comfortaa-Bold.ttf");
+}
+@font-face {
+  font-family: "ComfortaaLight";
+  src: url("assets/fonts/comfortaa/Comfortaa-Light.ttf");
+}
+@font-face {
+  font-family: "RobotoLight";
+  src: url("assets/fonts/roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "CustomFont";
+  src: url("assets/fonts/custom-font.woff2");
+}
+
+/*# sourceMappingURL=styles.css.map */

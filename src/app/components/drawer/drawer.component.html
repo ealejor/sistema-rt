@@ -1,0 +1,9 @@
+<ul class="nav-links">
+    @for (link of links; track link) {
+        <li class="nav-item">
+            <a routerLink="{{ link.path }}" class="nav-link" (click)="changeOpen()">
+                {{ link.name }}
+            </a>
+        </li>
+    }
+</ul>

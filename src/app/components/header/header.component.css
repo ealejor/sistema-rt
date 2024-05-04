@@ -1,0 +1,47 @@
+@keyframes toggle {
+  0%, 33.33% {
+    fill: #55565a;
+  }
+  33.34%, 66.66% {
+    fill: #f98f00;
+  }
+  66.67%, 100% {
+    fill: #f2d082;
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav #circle6515 {
+  animation: toggle 2s infinite;
+}
+.nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style-type: none;
+}
+.nav .nav-links .nav-item {
+  font-family: CustomFont, serif;
+  font-size: 15px;
+  list-style: none;
+}
+.nav .nav-links .nav-item .nav-link {
+  color: #55565a;
+  text-decoration: none;
+}
+.nav .nav-links .nav-item .nav-link:hover {
+  color: #f98f00;
+}
+.nav .nav-hamburger {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.nav .nav-hamburger:active {
+  transform: scale(0.7);
+}
+
+/*# sourceMappingURL=header.component.css.map */

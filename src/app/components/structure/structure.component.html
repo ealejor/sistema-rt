@@ -1,0 +1,39 @@
+<div class="struct">
+    <div class="back">
+
+    </div>
+    <div class="hdr">
+        <div class="hdr-item">
+            <ng-content select="[hdr]"/>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="nav-item">
+            <ng-content select="[nav]"/>
+        </div>
+    </div>
+
+    <div class="mn">
+        <div class="mn-item">
+            <ng-content select="[mn]"/>
+        </div>
+    </div>
+
+    <div class="ftr">
+        <div class="ftr-item">
+            <ng-content select="[ftr]"/>
+        </div>
+    </div>
+
+    <div class="sftr">
+        <div class="sftr-item">
+            <ng-content select="[sftr]"/>
+        </div>
+    </div>
+
+    <dialog id="dwr" open>
+        <ng-content select="[dwr]"/>
+    </dialog>
+</div>
+

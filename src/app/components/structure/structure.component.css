@@ -1,0 +1,69 @@
+.struct {
+  display: flex;
+  flex-direction: column;
+}
+.struct .hdr {
+  background-color: #ffffff;
+  color: #55565a;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  user-select: none;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  align-content: center;
+}
+.struct .hdr .hdr-item {
+  padding: 0 40px 0 40px;
+}
+.struct .nav {
+  margin-top: 80px;
+  user-select: none;
+}
+.struct .nav .nav-item {
+  padding: 0 40px 0 40px;
+}
+.struct .mn {
+  height: 100vh;
+}
+.struct .mn .mn-item {
+  padding: 0 40px 0 40px;
+}
+.struct .ftr {
+  background: #f98f00;
+  /*background-color: #2e3349ff;*/
+  color: white;
+  width: 100%;
+}
+.struct .ftr .ftr-item {
+  padding: 0 40px 0 40px;
+}
+.struct .sftr {
+  /*background: #f98f00;*/
+  background-color: #2e3349;
+}
+.struct .sftr .sftr-item {
+  padding: 0 40px 0 40px;
+}
+.struct #dwr {
+  position: fixed;
+  width: 100%;
+  height: 100hv;
+  /*background: #2e3349;*/
+  z-index: 10000;
+}
+.struct #dwr ::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.struct .back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 51, 73, 0.37);
+  z-index: 9999;
+}
+
+/*# sourceMappingURL=structure.component.css.map */
