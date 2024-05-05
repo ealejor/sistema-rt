@@ -1,44 +1,5 @@
-/*#alert-dialog::backdrop {
-    background: linear-gradient(#000d, #000a);
-}*/
-#alert-dialog {
-  /*border-color: #004f8b;*/
-  border-width: 0;
-  border-radius: 0;
-  padding: 20px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100vh;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-}
-#alert-dialog::backdrop {
-  background: linear-gradient(rgba(0, 0, 0, 0.8666666667), rgba(0, 0, 0, 0.6666666667));
-}
-
-::backdrop {
-  background: linear-gradient(rgba(0, 0, 0, 0.8666666667), rgba(0, 0, 0, 0.6666666667));
-}
-
-.struct main ::backdrop {
-  background: linear-gradient(rgba(0, 0, 0, 0.8666666667), rgba(0, 0, 0, 0.6666666667));
-}
-
-/*
 .floating {
-    height: 100hv;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #2e3349;
-    border-width: 0;
-    border-radius: 0;
-    padding: 20px;
-
-    &::backdrop {
-        background: linear-gradient(#000d, #000a);
-    }
-}*/
+  border: none;
+}
 
 /*# sourceMappingURL=app.component.css.map */

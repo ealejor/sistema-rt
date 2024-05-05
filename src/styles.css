@@ -25,5 +25,16 @@
   font-family: "CustomFont";
   src: url("assets/fonts/custom-font.woff2");
 }
+:root {
+  --body-oveer-flow: auto;
+}
+
+body {
+  overflow: var(--body-oveer-flow);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 /*# sourceMappingURL=styles.css.map */

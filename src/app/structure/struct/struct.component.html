@@ -1,0 +1,83 @@
+<div class="struct">
+    <dialog [open]="drawer">
+        <ng-content select="[dlg]"/>
+    </dialog>
+
+    @if (backdoor) {
+        <div class="back" (click)="hidden()"></div>
+    }
+    <header
+        [ngStyle]="{
+            'background': color.header
+        }"
+    >
+        <div
+            [ngStyle]="{
+                'padding-left.px': padding.left,
+                'padding-right.px': padding.right,
+            }"
+        >
+            <ng-content select="[hdr]"/>
+        </div>
+    </header>
+
+    <nav
+        [ngStyle]="{
+            'background': color.main
+        }"
+    >
+        <div
+            [ngStyle]="{
+                'padding-left.px': padding.left,
+                'padding-right.px': padding.right
+            }"
+        >
+            <ng-content select="[nav]"/>
+        </div>
+    </nav>
+
+    <main
+        [ngStyle]="{
+            'background': color.main
+        }"
+    >
+        <div
+            [ngStyle]="{
+                'padding-left.px': padding.left,
+                'padding-right.px': padding.right
+            }"
+        >
+            <ng-content select="[mn]"/>
+        </div>
+    </main>
+
+    <footer
+        [ngStyle]="{
+            'background': color.footer
+        }"
+    >
+        <div
+            [ngStyle]="{
+                'padding-left.px': padding.left,
+                'padding-right.px': padding.right
+            }"
+        >
+            <ng-content select="[ftr]"/>
+        </div>
+    </footer>
+
+    <footer
+        [ngStyle]="{
+            'background': color.sfooter
+        }"
+    >
+        <div
+            [ngStyle]="{
+                'padding-left.px': padding.left,
+                'padding-right.px': padding.right
+            }"
+        >
+            <ng-content select="[sftr]"/>
+        </div>
+    </footer>
+</div>

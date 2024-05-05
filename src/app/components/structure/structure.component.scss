@@ -8,82 +8,59 @@ $colorFont: white;
     display: flex;
     flex-direction: column;
 
+    .drop {
+        background-color: rgba(46, 51, 73, 0.55);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 999999;
+        //display: none;
+    }
 
 
     .hdr {
+        position: sticky;
+        top: 0;
+
         background-color: $backgroundColorHeader;
         color: #55565aff;
         height: $headerSize;
         width: 100%;
-        position: fixed;
         overflow: hidden;
         user-select: none;
         box-sizing: border-box;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
         align-content: center;
-
-        .hdr-item {
-            padding: 0 $paddingLeftTop 0 $paddingLeftTop;
-        }
     }
 
     .nav {
-        margin-top: $headerSize;
         user-select: none;
-
-        .nav-item {
-            padding: 0 $paddingLeftTop 0 $paddingLeftTop;
-        }
     }
 
     .mn {
         height: 100vh;
-
-        .mn-item {
-            padding: 0 $paddingLeftTop 0 $paddingLeftTop;
-        }
     }
 
     .ftr {
-        background: #f98f00;
-        /*background-color: #2e3349ff;*/
+        background-color: #f98f00;
         color: $colorFont;
         width: 100%;
-
-        .ftr-item {
-            padding: 0 $paddingLeftTop 0 $paddingLeftTop;
-        }
     }
 
     .sftr {
-        /*background: #f98f00;*/
         background-color: #2e3349ff;
-
-        .sftr-item {
-            padding: 0 $paddingLeftTop 0 $paddingLeftTop;
-        }
     }
 
-    #dwr {
-        position: fixed;
+    /*#dwr {
+        position: absolute;
         width: 100%;
         height: 100hv;
-        ::backdrop {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        /*background: #2e3349;*/
-        z-index: 10000;
-    }
+    }*/
+}
 
-    .back{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(46, 51, 73, 0.37);
-       // z-index: 10000000;
-        z-index: 9999;
-    }
+.item-padding {
+    padding: 0 $paddingLeftTop 0 $paddingLeftTop;
 }

@@ -15,6 +15,7 @@
     font-family: 'ComfortaaBold';
     src: url('assets/fonts/comfortaa/Comfortaa-Bold.ttf');
 }
+
 @font-face {
     font-family: 'ComfortaaLight';
     src: url('assets/fonts/comfortaa/Comfortaa-Light.ttf');
@@ -28,4 +29,17 @@
 @font-face {
     font-family: 'CustomFont';
     src: url('assets/fonts/custom-font.woff2');
+}
+
+
+
+:root {
+    --body-oveer-flow: auto;
+}
+
+body {
+    overflow: var(--body-oveer-flow);
+}
+::-webkit-scrollbar{
+    display: none;
 }

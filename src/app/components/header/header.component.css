@@ -14,8 +14,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  align-content: start;
+  padding: 16px 0 16px 0;
+  /*.logo {
+      height: 30px;
+  }*/
 }
-.nav #circle6515 {
+.nav #path336 {
   animation: toggle 2s infinite;
 }
 .nav .nav-links {

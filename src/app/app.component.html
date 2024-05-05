@@ -1,31 +1,32 @@
-<app-structure class="struct" style="font-family: CustomFont; color: #55565aff">
-    <header hdr>
-        <app-header
-            [links]="links"
-            [listener]="this"
-        />
-    </header>
+<app-struct
+    style="font-family: CustomFont,monospace; color: #55565aff"
+    [padding]="padding"
+    [drawer]="openDrawer"
+    [backdoor]="openBackdoor"
+    [color]="{
+        footer: '#f98f00' ,
+        sfooter: '#2e3349ff',
+        header:'#fff',
+        main:'#fff'
+    }"
+>
+    <app-drawer
+        dlg
+        [links]="links"
+        [drawer]="openDrawer"
+        [backdoor]="openBackdoor"
+        [listener]="this"
+    />
 
-    <!--<nav nav>
-        <h5>Inicio / aplicaciones más buscadas / app</h5>
-    </nav>-->
+    <app-header
+        hdr
+        [listener]="this"
+        [links]="links"
+    />
 
-    <main mn>
-        <router-outlet/>
-        <dialog open>
-            <h1>hola</h1>
-        </dialog>
-    </main>
+    <router-outlet mn/>
 
-    <footer ftr>
-        <app-footer/>
-    </footer>
+    <app-footer ftr/>
 
-    <footer sftr>
-        <app-sfooter/>
-    </footer>
-
-    <dialog dwr class="floating" id="alert-dialog" [open]="openDrawer">
-        <app-drawer [links]="links" [open]="openDrawer"/>
-    </dialog>
-</app-structure>
+    <app-sfooter sftr/>
+</app-struct>
