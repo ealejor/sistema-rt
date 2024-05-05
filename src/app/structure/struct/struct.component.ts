@@ -1,6 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Color} from "@app/structure/Color";
 import {NgClass, NgStyle} from "@angular/common";
+import {NgEventBus} from "ng-event-bus";
 
 export interface BackgroundColor {
     header: Color
@@ -24,20 +25,36 @@ export interface Padding {
     templateUrl: './struct.component.html',
     styleUrl: './struct.component.scss'
 })
-export class StructComponent {
+export class StructComponent implements OnInit {
     @Input() padding: Padding = {left: 10, right: 10};
     @Input() color: BackgroundColor = {
-        header: "#ff7272",
+        header: "#fff",
         main: "#fff",
         footer: "#fff",
-        sfooter: "#472828"
+        sfooter: "#fff"
     }
 
-    hidden() {
-        this.backdoor = false
-        this.drawer = false;
+    drawer = false;
+    backdoor = false;
+
+    constructor(private eventBus: NgEventBus) {
     }
 
-    @Input() drawer = false;
-    @Input() backdoor = false;
+    ngOnInit(): void {
+        this.eventBus.on<boolean>("open").subscribe(
+            (meta) => {
+                if (meta.data) {
+                    this.drawer = true;
+                    this.backdoor = true;
+                } else {
+                    this.drawer = false;
+                    this.backdoor = false;
+                }
+            }
+        )
+    }
+
+    onClick() {
+        this.eventBus.cast<boolean>("open", false);
+    }
 }

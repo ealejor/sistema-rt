@@ -4,7 +4,7 @@
     </dialog>
 
     @if (backdoor) {
-        <div class="back" (click)="hidden()"></div>
+        <div class="back" (click)="onClick()"></div>
     }
     <header
         [ngStyle]="{
@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    <nav
+    <!--<nav
         [ngStyle]="{
             'background': color.main
         }"
@@ -34,7 +34,7 @@
         >
             <ng-content select="[nav]"/>
         </div>
-    </nav>
+    </nav>-->
 
     <main
         [ngStyle]="{

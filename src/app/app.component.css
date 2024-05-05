@@ -1,5 +1,6 @@
-.floating {
-  border: none;
+.app {
+  font-family: CustomFont, monospace;
+  color: #55565a;
 }
 
 /*# sourceMappingURL=app.component.css.map */

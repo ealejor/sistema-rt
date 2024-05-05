@@ -1,26 +1,15 @@
 <app-struct
-    style="font-family: CustomFont,monospace; color: #55565aff"
+    class="app"
     [padding]="padding"
-    [drawer]="openDrawer"
-    [backdoor]="openBackdoor"
-    [color]="{
-        footer: '#f98f00' ,
-        sfooter: '#2e3349ff',
-        header:'#fff',
-        main:'#fff'
-    }"
+    [color]="color"
 >
     <app-drawer
         dlg
         [links]="links"
-        [drawer]="openDrawer"
-        [backdoor]="openBackdoor"
-        [listener]="this"
     />
 
     <app-header
         hdr
-        [listener]="this"
         [links]="links"
     />
 

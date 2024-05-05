@@ -67,7 +67,7 @@
         <ul class="nav-links">
             @for (link of links; track link) {
                 <li class="nav-item">
-                    <a routerLink="{{ link.path }}" class="nav-link" (click)="ok()">
+                    <a routerLink="{{ link.path }}" class="nav-link" (click)="onClick()">
                         {{ link.name }}
                     </a>
                 </li>
