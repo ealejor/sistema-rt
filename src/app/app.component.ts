@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
+import {StructureComponent} from "@app/components/structure/structure.component";
 import {HeaderComponent} from "@app/components/header/header.component";
 import {FooterComponent} from "@app/components/footer/footer.component";
 import {DrawerComponent} from "@app/components/drawer/drawer.component";
@@ -11,7 +12,7 @@ import {BackgroundColor, Padding, StructComponent} from "@app/structure/struct/s
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeaderComponent, FooterComponent, DrawerComponent, SfooterComponent, StructComponent],
+    imports: [RouterOutlet, StructureComponent, HeaderComponent, FooterComponent, DrawerComponent, SfooterComponent, StructComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
@@ -27,11 +28,11 @@ export class AppComponent {
     links: Link[] = [
         {
             path: ROUTES.STRUCTURED,
-            name: "Diseño Estructurado"
+            name: 'Análisis y Diseño Estructurado'
         },
         {
             path: ROUTES.OO,
-            name: "Diseño Orientado a Objetos"
-        }
+            name: 'Análisis y Diseño Orientado a Objetos'
+        },
     ];
 }

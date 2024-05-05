@@ -5,9 +5,9 @@ import {ErrorComponent} from "@app/pages/error/error.component";
 import {AboutComponent} from "@app/pages/about/about.component";
 
 export const ROUTES = {
-    STRUCTURED: 'diseño-estructurado',
-    OO: 'diseño-orientado-a-objetos',
-    ABOUT: 'acerca-de'
+    STRUCTURED: 'diseño estructurado',
+    OO: 'diseño orientado a objetos',
+    ABOUT: 'acerca de'
 };
 
 export const routes: Routes = [

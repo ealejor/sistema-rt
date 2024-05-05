@@ -1,0 +1,46 @@
+<div class="struct">
+    <div class="drop">
+
+    </div>
+
+    <!-- cabecera de la aplicación -->
+    <div class="hdr">
+        <div class="item-padding">
+            <ng-content select="[hdr]"/>
+        </div>
+    </div>
+
+    <!--navegación-->
+    <div class="nav">
+        <div class="item-padding">
+            <ng-content select="[nav]"/>
+        </div>
+    </div>
+
+    <!--contenido principal-->
+    <div class="mn">
+        <div class="item-padding">
+            <ng-content select="[mn]"/>
+        </div>
+    </div>
+
+    <!--pie de página 1-->
+    <div class="ftr">
+        <div class="item-padding">
+            <ng-content select="[ftr]"/>
+        </div>
+    </div>
+
+    <!--pie de página 2-->
+    <div class="sftr">
+        <div class="item-padding">
+            <ng-content select="[sftr]"/>
+        </div>
+    </div>
+
+    <!--cajón de navegación-->
+    <div id="dwr">
+        <ng-content select="[dwr]"/>
+    </div>
+</div>
+

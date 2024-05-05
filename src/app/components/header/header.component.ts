@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
+import {NgOptimizedImage} from "@angular/common";
 import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 import {Link} from "@app/components/header/Link";
 import {NgEventBus} from "ng-event-bus";
@@ -8,7 +9,8 @@ import {NgEventBus} from "ng-event-bus";
     selector: 'app-header',
     standalone: true,
     imports: [
-        RouterLink
+        RouterLink,
+        NgOptimizedImage
     ],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
@@ -16,6 +18,8 @@ import {NgEventBus} from "ng-event-bus";
 export class HeaderComponent implements OnInit {
     isMobile = false;
     @Input() links?: Link[];
+
+    //a:RouterLink;
 
     public constructor(
         private responsive: BreakpointObserver,
