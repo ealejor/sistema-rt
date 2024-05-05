@@ -1,25 +1,19 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {NgOptimizedImage} from "@angular/common";
-import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
+import {BreakpointObserver} from "@angular/cdk/layout";
 import {Link} from "@app/components/header/Link";
 import {NgEventBus} from "ng-event-bus";
 
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [
-        RouterLink,
-        NgOptimizedImage
-    ],
+    imports: [RouterLink],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
     isMobile = false;
     @Input() links?: Link[];
-
-    //a:RouterLink;
 
     public constructor(
         private responsive: BreakpointObserver,
@@ -29,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
     public ngOnInit(): void {
         this.responsive.observe(
-            [Breakpoints.Handset]
+            "(max-width: 768px)"
         ).subscribe(result => {
             this.isMobile = result.matches;
             this.eventBus.cast<boolean>("open", false);

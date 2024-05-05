@@ -12,7 +12,7 @@ import {NgEventBus} from "ng-event-bus";
     templateUrl: './drawer.component.html',
     styleUrl: './drawer.component.scss'
 })
-export class DrawerComponent /*implements OnMenuHamburger*/ {
+export class DrawerComponent {
     @Input() links?: Link[];
 
     constructor(private eventBus: NgEventBus) {
