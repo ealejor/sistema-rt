@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 20px;
+
+    .title {
+        font-size: 20px;
+        font-family: CustomFont, monospace;
+        color: #4e5678;
+    }
+
+    .img {
+
+    }
+}

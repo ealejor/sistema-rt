@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Link} from "@app/components/header/Link";
+import {Link} from "@app/common/Link";
 import {RouterLink} from "@angular/router";
 import {NgEventBus} from "ng-event-bus";
 
@@ -18,7 +18,7 @@ export class DrawerComponent {
     constructor(private eventBus: NgEventBus) {
     }
 
-    onClick() {
+    clickOnList() {
         this.eventBus.cast<boolean>(
             "open",
             false

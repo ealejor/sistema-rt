@@ -1,54 +1,55 @@
-@keyframes toggle {
-    0%, 33.33% {
-        fill: #55565a;
-    }
-    33.34%, 66.66% {
-        fill: #f98f00ff;
-    }
-    66.67%, 100% {
-        fill: #f2d082ff;
-    }
-}
-
-.nav {
+.container { // cabecera de la aplicación
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    align-content: start;
-    padding: 16px 0 16px 0;
+    gap: 30px;
+    height: 70px;
 
-    /*.logo {
-        height: 30px;
-    }*/
+    .logo { // logo de la aplicación
+        @keyframes sequential-color {
+            0%, 33.33% {
+                fill: #55565a;
+            }
+            33.34%, 66.66% {
+                fill: #f98f00ff;
+            }
+            66.67%, 100% {
+                fill: #f2d082ff;
+            }
+        }
 
-    #path336 {
-        animation: toggle 2s infinite;
+        #circle {
+            animation: sequential-color 2s infinite;
+        }
     }
 
-    .nav-links {
+    .menu { // menú de la aplicación en modo escritorio
         display: flex;
         flex-direction: row;
         gap: 30px;
         list-style-type: none;
+        height: 100%;
 
-        .nav-item {
+        .item {
             font-family: CustomFont, serif;
             font-size: 15px;
-            list-style: none;
+            text-decoration: none;
+            color: #55565aff;
+            user-select: none;
 
-            .nav-link {
-                color: #55565aff;
-                text-decoration: none;
-
-                &:hover {
-                    color: #f98f00ff;
-                }
+            &:hover {
+                color: #f98f00ff;
             }
         }
     }
 
-    .nav-hamburger {
+    .hamburger { // icono hamburguesa en modo dispositivo móvil
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        padding: 10px 0;
+
         cursor: pointer;
         transition: transform 0.2s;
 

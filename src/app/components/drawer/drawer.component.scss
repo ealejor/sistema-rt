@@ -1,45 +1,16 @@
-/*.nav-links {
-    !*padding-top: 20px;
-    padding-bottom: 10px;*!
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    .nav-item {
-        list-style: none;
-        padding-left: 40px;
-        padding-right: 40px;
-        width: 100%;
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            font-family: ComfortaaRegular, monospace;
-            !* background-color: #004f8b;
-             width: 100%;
-             padding: 10px;
-             border-radius: 10px;*!
-
-            &:hover {
-                color: #f98f00;
-            }
-        }
-    }
-}*/
-
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*align-items: center;*/
     height: 100vh;
 
     p {
+        /*display: block;*/
         color: #ccc;
         font-family: RobotoLight, serif;
         font-size: 12px;
         padding: 10px 40px;
+        margin: 0 auto;
     }
 }
 
@@ -51,34 +22,32 @@
 
     .logo {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1e2130;
         padding: 20px 0;
+        background-color: #1e2130;
+        svg{
+            display: block;
+            margin: 0 auto;
+        }
     }
 
-    .nav-links {
+    .nav-ul {
         display: flex;
         flex-direction: column;
-        gap: 20px;
 
-        .nav-item {
+        .nav-li {
             list-style: none;
-            padding-left: 40px;
-            padding-right: 40px;
+            padding: 10px 40px;
             width: 100%;
+            cursor: pointer;
+            color: white;
+            font-family: CustomFont, monospace;
+            font-size: 14px;
+            text-decoration: none;
+            user-select: none;
 
-            .nav-link {
-                color: white;
-                text-decoration: none;
-                font-family: CustomFont, monospace;
-                font-size: 15px;
-
-                &:hover {
-                    color: #f98f00;
-                }
+            &:hover {
+                background-color: rgba(242, 208, 130, 0.09);
+                color: #f98f00;
             }
         }
     }

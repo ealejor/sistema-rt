@@ -64,13 +64,11 @@
                     id="path332"/>
             </svg>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-ul">
             @for (link of links; track link) {
-                <li class="nav-item">
-                    <a routerLink="{{ link.path }}" class="nav-link" (click)="onClick()">
-                        {{ link.name }}
-                    </a>
-                </li>
+                <a class="nav-li" (click)="clickOnList()" routerLink="{{ link.path }}">
+                    {{ link.name }}
+                </a>
             }
         </ul>
     </div>

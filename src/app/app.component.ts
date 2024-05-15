@@ -3,10 +3,10 @@ import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from "@app/components/header/header.component";
 import {FooterComponent} from "@app/components/footer/footer.component";
 import {DrawerComponent} from "@app/components/drawer/drawer.component";
-import {Link} from "@app/components/header/Link";
+import {Link} from "@app/common/Link";
 import {ROUTES} from "@app/app.routes";
 import {SfooterComponent} from "@app/components/sfooter/sfooter.component";
-import {BackgroundColor, Padding, StructComponent} from "@app/structure/struct/struct.component";
+import {BackgroundColor, StructComponent} from "@app/structure/struct/struct.component";
 
 @Component({
     selector: 'app-root',
@@ -16,7 +16,6 @@ import {BackgroundColor, Padding, StructComponent} from "@app/structure/struct/s
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    padding: Padding = {left: 30, right: 30};
     color: BackgroundColor = {
         footer: '#f98f00',
         sfooter: '#2e3349ff',

@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Color} from "@app/structure/Color";
+import {Color} from "@app/common/Color";
 import {NgClass, NgStyle} from "@angular/common";
 import {NgEventBus} from "ng-event-bus";
+import {BreakpointObserver} from "@angular/cdk/layout";
 
 export interface BackgroundColor {
     header: Color
@@ -10,10 +11,10 @@ export interface BackgroundColor {
     sfooter: Color
 }
 
-export interface Padding {
+/*export interface Padding {
     left: number;
     right: number;
-}
+}*/
 
 @Component({
     selector: 'app-struct',
@@ -26,7 +27,6 @@ export interface Padding {
     styleUrl: './struct.component.scss'
 })
 export class StructComponent implements OnInit {
-    @Input() padding: Padding = {left: 10, right: 10};
     @Input() color: BackgroundColor = {
         header: "#fff",
         main: "#fff",
@@ -34,10 +34,18 @@ export class StructComponent implements OnInit {
         sfooter: "#fff"
     }
 
+    isMobile = false;
+
+    @Input() paddingDesktop = 20;
+    @Input() paddingMobile = 20;
+
     drawer = false;
     backdoor = false;
 
-    constructor(private eventBus: NgEventBus) {
+    constructor(
+        private eventBus: NgEventBus,
+        private responsive: BreakpointObserver
+    ) {
     }
 
     ngOnInit(): void {
@@ -52,9 +60,15 @@ export class StructComponent implements OnInit {
                 }
             }
         )
+
+        this.responsive.observe(
+            "(max-width: 768px)"
+        ).subscribe(result => {
+            this.isMobile = result.matches;
+        });
     }
 
-    onClick() {
+    clickOnBackdoor() {
         this.eventBus.cast<boolean>("open", false);
     }
 }

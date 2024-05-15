@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Components
+
+<span style="color:yellow"> ██ mobile</span> <br>
+<span style="color:red"> ██ all</span> <br>
+<span style="color:green"> ██ desktop</span> <br>
+
+```mermaid
+graph v
+    A([Structure]) --> B([Header])
+    A --> C([Main])
+    A --> D([Footer])
+    A --> E[[Backdoor]]
+    A --> F[[Drawer]]
+    B --> G([Logo])
+    B --> H[Menu]
+    B --> I[[Burger]] 
+```
