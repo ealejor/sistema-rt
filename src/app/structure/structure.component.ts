@@ -1,33 +1,25 @@
+//
+// Created by edgar on 3/5/24 at 10:06:04.
+//
+
 import {Component, Input, OnInit} from '@angular/core';
-import {Color} from "@app/common/Color";
 import {NgClass, NgStyle} from "@angular/common";
 import {NgEventBus} from "ng-event-bus";
 import {BreakpointObserver} from "@angular/cdk/layout";
-
-export interface BackgroundColor {
-    header: Color
-    main: Color
-    footer: Color
-    sfooter: Color
-}
-
-/*export interface Padding {
-    left: number;
-    right: number;
-}*/
+import {BackgroundStructure} from "@app/structure/BackgroundStructure";
 
 @Component({
-    selector: 'app-struct',
+    selector: 'app-structure',
     standalone: true,
     imports: [
         NgStyle,
         NgClass
     ],
-    templateUrl: './struct.component.html',
-    styleUrl: './struct.component.scss'
+    templateUrl: './structure.component.html',
+    styleUrl: './structure.component.scss'
 })
-export class StructComponent implements OnInit {
-    @Input() color: BackgroundColor = {
+export class StructureComponent implements OnInit {
+    @Input() color: BackgroundStructure = {
         header: "#fff",
         main: "#fff",
         footer: "#fff",
@@ -49,7 +41,7 @@ export class StructComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.eventBus.on<boolean>("open").subscribe(
+        this.eventBus.on<boolean>("open:drawer").subscribe(
             (meta) => {
                 if (meta.data) {
                     this.drawer = true;
@@ -69,6 +61,7 @@ export class StructComponent implements OnInit {
     }
 
     clickOnBackdoor() {
-        this.eventBus.cast<boolean>("open", false);
+        this.eventBus.cast<boolean>("open:drawer", false);
     }
 }
+

@@ -65,10 +65,12 @@
             </svg>
         </div>
         <ul class="nav-ul">
-            @for (link of links; track link) {
-                <a class="nav-li" (click)="clickOnList()" routerLink="{{ link.path }}">
-                    {{ link.name }}
+            @for (link of menus; track link) {
+                <a class="nav-li" (click)="clickOnMenu()" routerLink="{{ link.path }}">
+                    {{ link.title }}
                 </a>
+            } @empty {
+                <div>empty</div>
             }
         </ul>
     </div>

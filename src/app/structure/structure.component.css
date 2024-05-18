@@ -3,7 +3,13 @@
   flex-direction: column;
   position: absolute;
 }
-.struct dialog {
+.struct .backdoor {
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.struct .drawer {
   border: none;
   width: 70%;
   height: 100vh;
@@ -11,16 +17,13 @@
   background-color: #2e3349;
   position: fixed;
 }
-.struct header {
+.struct .header {
   position: sticky;
   top: 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
-.struct .backdoor {
-  position: absolute;
-  inset: 0 0 0 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
+.struct .main {
+  font-family: CustomFont monospace;
 }
 
-/*# sourceMappingURL=struct.component.css.map */
+/*# sourceMappingURL=structure.component.css.map */

@@ -1,4 +1,4 @@
-<app-struct
+<app-structure
     class="app"
     [color]="color"
     [paddingDesktop]="60"
@@ -6,12 +6,12 @@
 >
     <app-drawer
         dlg
-        [links]="links"
+        [menus]="menus"
     />
 
     <app-header
         hdr
-        [links]="links"
+        [menus]="menus"
     />
 
     <router-outlet mn/>
@@ -19,4 +19,4 @@
     <app-footer ftr/>
 
     <app-sfooter sftr/>
-</app-struct>
+</app-structure>

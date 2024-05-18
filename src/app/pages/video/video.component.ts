@@ -2,13 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {BreakpointObserver} from "@angular/cdk/layout";
 
 @Component({
-    selector: 'app-about',
+    selector: 'app-video',
     standalone: true,
     imports: [],
-    templateUrl: './about.component.html',
-    styleUrl: './about.component.scss'
+    templateUrl: './video.component.html',
+    styleUrl: './video.component.scss'
 })
-export class AboutComponent implements OnInit {
+export class VideoComponent implements OnInit {
     isMobile: boolean = true;
 
     constructor(private responsive: BreakpointObserver) {

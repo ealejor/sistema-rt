@@ -7,4 +7,4 @@ type RGBA = `rgba(${number},${number},${number},${number})` | `rgba(${number}, $
 type HEX = `#${string}`;
 
 
-export type Color = RGB | RGBA | HEX;
+export type ColorStructure = RGB | RGBA | HEX;

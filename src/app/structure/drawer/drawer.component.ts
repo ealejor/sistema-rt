@@ -1,5 +1,9 @@
+//
+// Created by edgar on 3/5/24 at 09:06:54.
+//
+
 import {Component, Input} from '@angular/core';
-import {Link} from "@app/common/Link";
+import {Menu} from "@app/structure/Menu";
 import {RouterLink} from "@angular/router";
 import {NgEventBus} from "ng-event-bus";
 
@@ -13,15 +17,12 @@ import {NgEventBus} from "ng-event-bus";
     styleUrl: './drawer.component.scss'
 })
 export class DrawerComponent {
-    @Input() links?: Link[];
+    @Input() menus: Menu[] = [];
 
     constructor(private eventBus: NgEventBus) {
     }
 
-    clickOnList() {
-        this.eventBus.cast<boolean>(
-            "open",
-            false
-        )
+    clickOnMenu() {
+        this.eventBus.cast<boolean>("open:drawer", false)
     }
 }

@@ -3,7 +3,14 @@
     flex-direction: column;
     position: absolute;
 
-    dialog {
+    .backdoor {
+        position: absolute;
+        inset: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .drawer {
         border: none;
         width: 70%;
         height: 100vh;
@@ -12,20 +19,21 @@
         position: fixed;
     }
 
-    header {
+    .header {
         position: sticky;
         top: 0;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     }
 
-    main {
+    .main {
+        font-family: CustomFont monospace;
+    }
+
+    .footer {
 
     }
 
-    .backdoor {
-        position: absolute;
-        inset: 0 0 0 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
+    .sfooter {
+
     }
 }

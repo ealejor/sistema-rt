@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
-import {ButtonCommon} from "@app/common/button/button.common";
+import {Component, OnInit} from '@angular/core';
+import {BreakpointObserver} from "@angular/cdk/layout";
 
 @Component({
-  selector: 'app-structured',
-  standalone: true,
-    imports: [
-        ButtonCommon
-    ],
-  templateUrl: './structured.component.html',
-  styleUrl: './structured.component.scss'
+    selector: 'app-structured',
+    standalone: true,
+    imports: [],
+    templateUrl: './structured.component.html',
+    styleUrl: './structured.component.scss'
 })
-export class StructuredComponent {
+export class StructuredComponent implements OnInit {
+    isMobile: boolean = true;
 
+    constructor(private responsive: BreakpointObserver) {
+    }
+
+    public ngOnInit(): void {
+        this.responsive.observe(
+            "(max-width: 768px)"
+        ).subscribe(result => {
+            this.isMobile = result.matches;
+        });
+    }
 }

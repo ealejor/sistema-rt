@@ -1,36 +1,53 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {HeaderComponent} from "@app/components/header/header.component";
-import {FooterComponent} from "@app/components/footer/footer.component";
-import {DrawerComponent} from "@app/components/drawer/drawer.component";
-import {Link} from "@app/common/Link";
-import {ROUTES} from "@app/app.routes";
-import {SfooterComponent} from "@app/components/sfooter/sfooter.component";
-import {BackgroundColor, StructComponent} from "@app/structure/struct/struct.component";
+import {HeaderComponent} from "@app/structure/header/header.component";
+import {FooterComponent} from "@app/structure/footer/footer.component";
+import {DrawerComponent} from "@app/structure/drawer/drawer.component";
+import {Menu} from "@app/structure/Menu";
+import {SfooterComponent} from "@app/structure/sfooter/sfooter.component";
+import {StructureComponent} from "@app/structure/structure.component";
+import {BackgroundStructure} from "@app/structure/BackgroundStructure";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeaderComponent, FooterComponent, DrawerComponent, SfooterComponent, StructComponent],
+    imports: [RouterOutlet, HeaderComponent, FooterComponent, DrawerComponent, SfooterComponent, StructureComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    color: BackgroundColor = {
+    color: BackgroundStructure = {
         footer: '#f98f00',
         sfooter: '#2e3349ff',
         header: '#fff',
         main: '#fff'
     }
 
-    links: Link[] = [
+    menus: Menu[] = [
+        {title: 'Inicio', path: ''},
         {
-            path: ROUTES.STRUCTURED,
-            name: 'Análisis y Diseño Estructurado'
+            title: 'Generalidades',
+            menu: [
+                {title: 'Introducción', path: ''},
+                {title: 'Antecedentes', path: ''},
+                {title: 'Planteamiento del Problema', path: ''},
+                {title: 'Árbol de Problemas', path: ''},
+                {title: 'Propósito de Estudio', path: ''},
+                {title: 'Metodología de la Investigación', path: ''},
+                {title: 'Método, Medios e Instrumentos', path: ''},
+                {title: 'Planificación de Actividades', path: ''},
+            ]
         },
         {
-            path: ROUTES.OO,
-            name: 'Análisis y Diseño Orientado a Objetos'
+            title: 'Marco Teórico',
+            menu: [
+                {title: 'Marco Institucional', path: ''},
+                {title: 'Metodología de Desarrollo', path: ''},
+                {title: 'Inventario', path: ''},
+            ]
         },
+        {title: 'Análisis y Diseño Estructurado', path: ''},
+        {title: 'Análisis y Diseño Orientado a Objetos', path: ''},
+        {title: 'Vídeo', path: ''},
     ];
 }
