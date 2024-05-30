@@ -17,7 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     <p style="padding-left: 10px">For desktop mode.</p> 
 </div>
 
-![Texto alternativo](diagram/component-diagram.svg)
+![component diagram](diagram/component-diagram.svg)
 
 ### App colors
 
