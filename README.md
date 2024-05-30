@@ -25,15 +25,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - `#ffa500`.
 - `#ffffff`.
 
-<div style="display: flex; gap: 0; flex-direction: column">
-    <div style="width: 100%; height: 40px; background-color: #55565a; border-radius: 0"></div>
-    <div style="width: 100%; height: 40px; background-color: #f98f00; border-radius: 0"></div>
-    <div style="width: 100%; height: 40px; background-color: #f2d082; border-radius: 0"></div>
-    <div style="width: 100%; height: 40px; background-color: #2e3349; border-radius: 0"></div>
-    <div style="width: 100%; height: 40px; background-color: #ffa500; border-radius: 0"></div>
-    <div style="width: 100%; height: 40px; background-color: #ffffff; border-radius: 0"></div>
-</div>
-<br><br><br>
+![Diagrama de componentes](diagram/rect.svg)
+
+<br>
 
 
 
