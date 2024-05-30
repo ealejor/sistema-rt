@@ -17,26 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     <p style="padding-left: 10px">For desktop mode.</p> 
 </div>
 
-```mermaid
-graph v
-    A((Structure)) --> B((Header))
-    A --> C((Main))
-    A --> D((Footer))
-    A --> E((Backdoor))
-    A --> F((Drawer))
-    B --> G((Logo))
-    B --> H((Menu))
-    B --> I((Burger))
-    style A fill: #E91E63, stroke: #FF8A80, stroke-width: 2px
-    style B fill: #E91E63, stroke: #FF8A80, stroke-width: 2px
-    style C fill: #E91E63, stroke: #FF8A80, stroke-width: 2px
-    style D fill: #E91E63, stroke: #FF8A80, stroke-width: 2px
-    style E fill: #004D40, stroke: #00ACC1, stroke-width: 2px
-    style F fill: #004D40, stroke: #00ACC1, stroke-width: 2px
-    style G fill: #E91E63, stroke: #FF8A80, stroke-width: 2px
-    style H fill: #FF8F00, stroke: #FFE57F, stroke-width: 2px
-    style I fill: #004D40, stroke: #00ACC1, stroke-width: 2px
-```
+![Texto alternativo](diagram/component-diagram.svg)
 
 ### App colors
 
