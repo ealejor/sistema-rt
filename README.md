@@ -1,23 +1,20 @@
 <h1 align="center">Sistema RT "Radio Taxi"</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6  and all dependencies are in the `package.json` file.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6 and all dependencies are in the `package.json` file.
 
 ### Component structure
 
-<div style="display: flex; flex-direction: row;align-items: center">
-    <div style="width: 15px; height: 15px; background-color: #E91E63; border-radius: 100px"></div>
-    <p style="padding-left: 10px">For all.</p>
-</div>
-<div style="display: flex; flex-direction: row;align-items: center">
-    <div style="width: 15px; height: 15px; background-color: #004D40; border-radius: 100px"></div>
-    <p style="padding-left: 10px">For mobile mode.</p> 
-</div>
-<div style="display: flex; flex-direction: row;align-items: center">
-    <div style="width: 15px; height: 15px; background-color: #FF8F00; border-radius: 100px"></div>
-    <p style="padding-left: 10px">For desktop mode.</p> 
-</div>
+| ![Diagrama de componentes](diagram/a.svg) | For all. |
+|:-----------------------------------------:|:--------:|
 
-![component diagram](diagram/component-diagram.svg)
+| ![Diagrama de componentes](diagram/b.svg) | For mobile mode. |
+|:-----------------------------------------:|:----------------:|
+
+| ![Diagrama de componentes](diagram/c.svg) | For desktop mode. |
+|:-----------------------------------------:|:-----------------:|
+
+
+![Diagrama de componentes](diagram/component-diagram.svg)
 
 ### App colors
 
