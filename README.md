@@ -25,7 +25,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - `#ffa500`.
 - `#ffffff`.
 
-![Diagrama de componentes](diagram/rect.svg)
+![Diagrama de componentes](diagram/colors.svg)
 
 <br>
 
