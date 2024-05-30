@@ -1,8 +1,8 @@
-<h1 align="center">Sistema RT "Radio Taxi"</h1>
+# Sistema RT "Radio Taxi"
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6 and all dependencies are in the `package.json` file.
 
-### Component structure
+## Component structure
 
 | ![Diagrama de componentes](diagram/a.svg) | For all. |
 |:-----------------------------------------:|:--------:|
@@ -16,7 +16,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![Diagrama de componentes](diagram/component-diagram.svg)
 
-### App colors
+## App colors
 
 - `#55565a`.
 - `#f98f00`.
