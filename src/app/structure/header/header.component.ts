@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
         });
     }
 
-    public clickOnIconHamburger() {
+    public clickInBurger() {
         this.eventBus.cast<boolean>("open:drawer", true);
     }
 }
