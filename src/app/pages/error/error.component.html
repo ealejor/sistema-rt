@@ -1,14 +1,15 @@
 <div>
-    @if (!isMobile) {
-        <div>
-            <img src="assets/gif/ups.gif">
-        </div>
-    }
+    <!--@if (!isMobile) {-->
+    <div>
+        <img ngSrc="assets/gif/ups.gif" alt="" height="428" width="313">
+    </div>
+    <!-- }-->
     <div>
         <h1>Oops!</h1>
         <p>Parece que estas perdido en el espacio.</p>
         <p>Código de error: 404</p>
         <p>Es posible que la página que estás buscando haya sido eliminada o no esté disponible temporalmente</p>
-        <button>¿ESTAR A SALVO?</button>
+
+        <a routerLink="/" (click)="clickInStart()">¿Regresar al inicio?</a>
     </div>
 </div>

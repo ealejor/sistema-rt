@@ -1,6 +1,6 @@
 # Sistema RT "Radio Taxi"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6 and all dependencies are in the `package.json` file.
+This project was **generated** with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6 and all dependencies are in the `package.json` file.
 
 ## Component structure
 

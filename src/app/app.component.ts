@@ -7,11 +7,12 @@ import {Menu} from "@app/structure/Menu";
 import {SfooterComponent} from "@app/structure/sfooter/sfooter.component";
 import {StructureComponent} from "@app/structure/structure.component";
 import {BackgroundStructure} from "@app/structure/BackgroundStructure";
+import {StructComponent} from "@app/tmp/struct/struct.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeaderComponent, FooterComponent, DrawerComponent, SfooterComponent, StructureComponent],
+    imports: [RouterOutlet, FooterComponent, DrawerComponent, SfooterComponent, StructureComponent, StructComponent, HeaderComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

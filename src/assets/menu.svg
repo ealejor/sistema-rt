@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-    width="24"
-    height="24"
+    width="20.44949"
+    height="15.337118"
     version="1.1"
     id="svg4"
     xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@
     <defs
         id="defs8"/>
     <path
-        d="M 1.7752546,4.3314408 H 22.224745 V 6.8876271 H 1.7752546 Z m 0,6.3904652 H 22.224745 v 2.556187 H 1.7752546 Z m 0,6.390466 H 22.224745 v 2.556187 H 1.7752546 Z"
+        d="M 0,0 H 20.44949 V 2.5561863 H 0 Z m 0,6.3904652 h 20.44949 v 2.556187 H 0 Z m 0,6.3904658 h 20.44949 v 2.556187 H 0 Z"
         id="path2"
         style="stroke-width:1.27809"/>
 </svg>

@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  font-family: CustomFont, monospace;
+  color: var(--color-text);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container .header {
+  background: var(--background-color-header);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.container .main {
+  background: var(--background-color-main);
+  flex-grow: 1;
+}
+.container .ofooter {
+  background: var(--background-color-ofooter);
+}
+.container .footer {
+  background: var(--background-color-footer);
+}
+
+/*# sourceMappingURL=struct.component.css.map */

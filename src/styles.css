@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/* COMFORTAA */
 @font-face {
   font-family: "ComfortaaRegular";
   src: url("assets/fonts/comfortaa/Comfortaa-Regular.ttf");
@@ -21,16 +22,71 @@
   font-family: "ComfortaaLight";
   src: url("assets/fonts/comfortaa/Comfortaa-Light.ttf");
 }
+/* ROBOTO */
+@font-face {
+  font-family: "RobotoBlack";
+  src: url("assets/fonts/roboto/Roboto-Black.ttf");
+}
+@font-face {
+  font-family: "RobotoBlackItalic";
+  src: url("assets/fonts/roboto/Roboto-BlackItalic.ttf");
+}
+@font-face {
+  font-family: "RobotoBold";
+  src: url("assets/fonts/roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "RobotoBoldItalic";
+  src: url("assets/fonts/roboto/Roboto-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "RobotoItalic";
+  src: url("assets/fonts/roboto/Roboto-Italic.ttf");
+}
 @font-face {
   font-family: "RobotoLight";
   src: url("assets/fonts/roboto/Roboto-Light.ttf");
 }
 @font-face {
-  font-family: "CustomFont";
-  src: url("assets/fonts/custom-font.woff2");
+  font-family: "RobotoLightItalic";
+  src: url("assets/fonts/roboto/Roboto-LightItalic.ttf");
+}
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("assets/fonts/roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "RobotoMediumItalic";
+  src: url("assets/fonts/roboto/Roboto-MediumItalic.ttf");
+}
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("assets/fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "RobotoThin";
+  src: url("assets/fonts/roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "RobotoThinItalic";
+  src: url("assets/fonts/roboto/Roboto-ThinItalic.ttf");
+}
+/* ELEGANT */
+@font-face {
+  font-family: "ElegantFont";
+  src: url("assets/fonts/elegant/elegant.woff2");
 }
 :root {
   --body-oveer-flow: auto;
+  --background-color-header: #ffffff;
+  --background-color-main: #ffffff;
+  --background-color-footer: #2e3349ff;
+  --background-color-ofooter: #f98f00;
+  --color-text: #55565a;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
