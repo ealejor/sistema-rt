@@ -1,6 +1,7 @@
 import {mergeApplicationConfig, ApplicationConfig} from '@angular/core';
 import {provideServerRendering} from '@angular/platform-server';
 import {appConfig} from "@app/app.config";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 
 const serverConfig: ApplicationConfig = {
     providers: [

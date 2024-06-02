@@ -1,8 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 import {HeaderComponent} from "@app/tmp/struct/header/header.component";
 import {RouterOutlet} from "@angular/router";
 import {OfooterComponent} from "@app/tmp/struct/ofooter/ofooter.component";
-import {BreakpointObserver} from "@angular/cdk/layout";
+import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 import {NgEventBus} from "ng-event-bus";
 import {FooterComponent} from "@app/tmp/struct/footer/footer.component";
 import {NgClass, NgStyle} from "@angular/common";
@@ -37,25 +40,21 @@ interface Padding {
     styleUrl: './struct.component.scss'
 })
 export class StructComponent implements OnInit {
-    isMobile: boolean = true;
+    isMobile: boolean = false;
     firstFooter: boolean = true;
     isNotFound: boolean = false;
 
     public constructor(
-        private responsive: BreakpointObserver,
+        private breakpoint: BreakpointObserver,
         private eventBus: NgEventBus
     ) {
-        /*this.eventBus.cast<boolean>(
-            Event.isMOBILE,
-            this.responsive.isMatched("(max-width: 768px)")
-        );*/
+        this.isMobile = this.breakpoint.isMatched(BreakPoints.MOBILE);
     }
 
     public ngOnInit(): void {
-        this.responsive.observe('(max-width: 768px)').subscribe(result => {
+        this.breakpoint.observe(BreakPoints.MOBILE).subscribe(result => {
             this.isMobile = result.matches;
-            //this.eventBus.cast<boolean>(Event.isMOBILE, result.matches);
-            console.log("isMobile", result.matches);
+            this.eventBus.cast<boolean>(Event.isMOBILE, this.isMobile);
         });
 
         this.eventBus.on<boolean>(Event.showFOOTER).subscribe(result => {

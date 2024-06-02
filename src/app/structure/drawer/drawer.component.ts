@@ -3,7 +3,7 @@
 //
 
 import {Component, Input} from '@angular/core';
-import {Menu} from "@app/structure/Menu";
+import {Menu} from "@app/tmp/struct/Menu";
 import {RouterLink} from "@angular/router";
 import {NgEventBus} from "ng-event-bus";
 

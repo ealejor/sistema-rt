@@ -3,7 +3,7 @@ import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from "@app/structure/header/header.component";
 import {FooterComponent} from "@app/structure/footer/footer.component";
 import {DrawerComponent} from "@app/structure/drawer/drawer.component";
-import {Menu} from "@app/structure/Menu";
+import {Menu} from "@app/tmp/struct/Menu";
 import {SfooterComponent} from "@app/structure/sfooter/sfooter.component";
 import {StructureComponent} from "@app/structure/structure.component";
 import {BackgroundStructure} from "@app/structure/BackgroundStructure";

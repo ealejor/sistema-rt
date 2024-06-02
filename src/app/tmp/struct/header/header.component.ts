@@ -1,9 +1,15 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgEventBus} from "ng-event-bus";
 import {NgStyle} from "@angular/common";
 import {DrawerComponent} from "@app/tmp/struct/header/drawer/drawer.component";
-import {MenuComponent} from "@app/tmp/struct/header/menu/menu.component";
 import {Event} from "@app/tmp/struct/Event";
+import {BreakpointObserver} from "@angular/cdk/layout";
+import {BreakPoints} from "@app/tmp/struct/BreakPoints";
+import {MenuDesktopComponent} from "@app/tmp/struct/header/menu/menu.desktop.component";
+
+export interface EventData {
+    isMobile: boolean;
+}
 
 @Component({
     selector: 'app-header',
@@ -11,21 +17,22 @@ import {Event} from "@app/tmp/struct/Event";
     imports: [
         NgStyle,
         DrawerComponent,
-        MenuComponent
+        MenuDesktopComponent
     ],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
 
-    isMobile: boolean = true;
+    isMobile: boolean = false;
     openDrawer: boolean = false;
     openBackdrop: boolean = false;
 
     public constructor(
         private eventBus: NgEventBus,
+        private breakpoint: BreakpointObserver
     ) {
-
+        this.isMobile = this.breakpoint.isMatched(BreakPoints.MOBILE);
     }
 
     /**

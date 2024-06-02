@@ -5,7 +5,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {BreakpointObserver} from "@angular/cdk/layout";
-import {Menu} from "@app/structure/Menu";
+import {Menu} from "@app/tmp/struct/Menu";
 import {NgEventBus} from "ng-event-bus";
 
 @Component({

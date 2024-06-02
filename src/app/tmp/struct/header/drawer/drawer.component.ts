@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {MenuComponent} from "@app/tmp/struct/header/drawer/menu/menu.component";
+import {MenuMobileComponent} from "@app/tmp/struct/header/drawer/menu/menu.mobile.component";
 
 @Component({
   selector: 'app-drawer',
   standalone: true,
     imports: [
-        MenuComponent
+        MenuMobileComponent
+
     ],
   templateUrl: './drawer.component.html',
   styleUrl: './drawer.component.scss'
