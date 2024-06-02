@@ -1,0 +1,27 @@
+<div class="container">
+    @if (!isNotFound) {
+        <!--cabecera de la aplicación-->
+        <header class="header" [ngStyle]="getPadding()">
+            <app-header/>
+        </header>
+    }
+
+    <!--contenido principal de la aplicación-->
+    <main class="main" [ngStyle]="getPadding()">
+        <app-main/>
+    </main>
+
+    @if (!isNotFound) {
+        <!--primera pie de página-->
+        @if (firstFooter) {
+            <footer class="ofooter" [ngStyle]="getPadding()">
+                <app-first-footer/>
+            </footer>
+        }
+
+        <!--segunda pie de página-->
+        <footer class="footer" [ngStyle]="getPadding()">
+            <app-last-footer/>
+        </footer>
+    }
+</div>

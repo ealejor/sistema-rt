@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    font-family: CustomFont, monospace;
+    color: var(--color-text);
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .header {
+        background: var(--background-color-header);
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .main {
+        background: var(--background-color-main);
+        flex-grow: 1; // Hace que el elemento crezca para ocupar el espacio restante
+    }
+
+    .ofooter {
+        background: var(--background-color-ofooter);
+    }
+
+    .footer {
+        background: var(--background-color-footer);
+    }
+}
