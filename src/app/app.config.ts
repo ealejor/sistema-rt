@@ -5,7 +5,6 @@ import {provideClientHydration} from '@angular/platform-browser';
 import {NgEventBus} from "ng-event-bus";
 import {routes} from "@app/app.routes";
 
-
 export const appConfig: ApplicationConfig = {
     providers: [provideRouter(routes), provideClientHydration(), NgEventBus]
 };
